@@ -1,0 +1,67 @@
+/* ----- Gallery section ------------------- */
+.gallery-img
+  display: block
+  position: relative
+  z-index: 1
+  width: 200px
+  height: 150px
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+  &:before
+    content: ""
+    position: absolute
+    opacity: 0
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background-color: rgba($col-2, 0.8)
+    transition: all 0.2s ease-in-out
+    z-index: 1
+    
+
+.gallery-img__icon
+  opacity: 0
+  position: absolute
+  left: 50%
+  top: 50%
+  margin-top: -28px
+  margin-left: -28px
+  width: 57px
+  height: 57px
+  text-align: center
+  line-height: 57px
+  border-radius: 50%
+  box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1)
+  background-color: $col-1
+  overflow: hidden
+  transition: opacity 0.2s
+  z-index: 2
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px)
+  .gallery-img
+    width: 300px
+    height: 250px
+    &:hover
+      img
+        -webkit-filter: grayscale(100%)
+        filter: grayscale(100%)
+      &:before
+        opacity: 1
+      .gallery-img__icon
+        opacity: 1
+/* end media min width 768 pixels */
+
+/* Min width 1000 pixels */
+@media only screen and (min-width: 1000px)
+  .gallery-img
+    width: 480px
+    height: 350px
+/* end media min width 1000 pixels */
+
+/* ----- END Gallery section --------------- */
+/*-------------------------------------*/
+/*-------------------------------------*/

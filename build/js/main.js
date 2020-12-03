@@ -57,6 +57,18 @@ jQuery(function($){
   //   ]
   // });
 
+  $('.slider_gallery').slick({
+    infinite: true,
+    dots: false,
+    arrows: false,
+    centerMode: true,
+    centerPadding: false,//'60px'
+    autoplay: true,
+    variableWidth: true,
+    autoplaySpeed: 2000,
+    speed: 300
+  });
+
   // $('.slider-for').slick({
   //   slidesToShow: 1,
   //   slidesToScroll: 1,
@@ -77,41 +89,12 @@ jQuery(function($){
   const validateOption = {
     rules: {
       text: "required",
-      login: "required",
-      lastname: "required",
-      adress: "required",
-      sity: "required",
-      email: {
-        required: true,
-        email: true
-      },
       select: {
         minlength: 1,
         required: true
       },
       phone: {
         required: true
-      },
-      password: {
-        required: true,
-        minlength: 6
-      },
-      confirm_password: {
-        required: true,
-        minlength: 6,
-        equalTo: "#password"
-      },
-      password2: {
-        minlength: 6
-      },
-      confirm_password2: {
-        equalTo: "#password2"
-      }
-    }, 
-    messages: {
-      test: {
-        required: "(Please choose up to 3 answers)",
-        minlength: "(PLEASE choose up to 3 answers)"
       }
     }
   }

@@ -205,6 +205,116 @@ a.icon {
 .icon {
   display: inline-block;
   vertical-align: middle;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+}
+
+.icon_ic-adr {
+  width: 15px;
+  height: 21px;
+  background-position: -5px -5px;
+}
+
+.icon_ic-message {
+  width: 21px;
+  height: 13px;
+  background-position: -30px -5px;
+}
+
+.icon_ic-planet {
+  width: 21px;
+  height: 21px;
+  background-position: -61px -5px;
+}
+
+.icon_ic-tel {
+  width: 21px;
+  height: 21px;
+  background-position: -92px -5px;
+}
+
+.icon_ic1 {
+  width: 39px;
+  height: 31px;
+  background-position: -5px -36px;
+}
+
+.icon_ic2 {
+  width: 43px;
+  height: 25px;
+  background-position: -54px -36px;
+}
+
+.icon_ic3 {
+  width: 48px;
+  height: 53px;
+  background-position: -107px -36px;
+}
+
+.icon_ic4 {
+  width: 34px;
+  height: 34px;
+  background-position: -5px -99px;
+}
+
+.icon_ic5 {
+  width: 40px;
+  height: 34px;
+  background-position: -49px -99px;
+}
+
+.icon_ic6 {
+  width: 19px;
+  height: 51px;
+  background-position: -99px -99px;
+}
+
+.icon_ic7 {
+  width: 49px;
+  height: 33px;
+  background-position: -165px -5px;
+}
+
+.icon_ic8 {
+  width: 28px;
+  height: 36px;
+  background-position: -165px -48px;
+}
+
+.icon_magnifier {
+  width: 24px;
+  height: 24px;
+  background-position: -165px -94px;
+}
+
+.icon_soc1 {
+  width: 17px;
+  height: 21px;
+  background-position: -123px -5px;
+}
+
+.icon_soc2 {
+  width: 25px;
+  height: 21px;
+  background-position: -128px -128px;
+}
+
+.icon_soc3 {
+  width: 13px;
+  height: 21px;
+  background-position: -203px -48px;
+}
+
+.icon_soc4 {
+  width: 19px;
+  height: 21px;
+  background-position: -199px -94px;
+}
+
+.icon_soc5 {
+  width: 21px;
+  height: 21px;
+  background-position: -163px -128px;
 }
 
 /* ----- END Sprite icons --------------- */
@@ -852,6 +962,88 @@ a:hover {
 
 /* end media min width 1200 pixels */
 /* ----- END Cards section --------------- */
+/*-------------------------------------*/
+/*-------------------------------------*/
+/* ----- Gallery section ------------------- */
+.gallery-img {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 200px;
+  height: 150px;
+}
+
+.gallery-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gallery-img:before {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(91, 108, 235, 0.8);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
+}
+
+.gallery-img__icon {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -28px;
+  margin-left: -28px;
+  width: 57px;
+  height: 57px;
+  text-align: center;
+  line-height: 57px;
+  border-radius: 50%;
+  -webkit-box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1);
+          box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  overflow: hidden;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  z-index: 2;
+}
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px) {
+  .gallery-img {
+    width: 300px;
+    height: 250px;
+  }
+  .gallery-img:hover img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+  .gallery-img:hover:before {
+    opacity: 1;
+  }
+  .gallery-img:hover .gallery-img__icon {
+    opacity: 1;
+  }
+}
+
+/* end media min width 768 pixels */
+/* Min width 1000 pixels */
+@media only screen and (min-width: 1000px) {
+  .gallery-img {
+    width: 480px;
+    height: 350px;
+  }
+}
+
+/* end media min width 1000 pixels */
+/* ----- END Gallery section --------------- */
 /*-------------------------------------*/
 /*-------------------------------------*/
 /* ----- Controls styles ----------------- */
