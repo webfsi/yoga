@@ -65,6 +65,17 @@ jQuery(function($){
     centerPadding: false,//'60px'
     autoplay: true,
     variableWidth: true,
+    autoplaySpeed: 4000,
+    speed: 300
+  });
+
+  $('.slider_about').slick({
+    infinite: false,
+    dots: false,
+    arrows: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // autoplay: true,
     autoplaySpeed: 2000,
     speed: 300
   });

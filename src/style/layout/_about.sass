@@ -1,0 +1,48 @@
+/* ----- about section ------------------- */
+.about-img
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15)
+  border-radius: 8px
+  display: block
+  overflow: hidden
+
+.about-grid__slider
+  max-width: 530px
+  margin: 0 auto
+
+.slider_about
+  .slick-list
+    margin-left: -15px
+    margin-right: -15px
+    padding: 20px 0 20px 0
+  .slider-slide
+    padding-left: 15px
+    padding-right: 15px
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px)
+  .about-grid
+    display: flex
+    &__content
+      padding-right: 40px
+      min-width: 50%
+      max-width: 50%
+    &__slider
+      min-width: 50%
+      max-width: 50%
+      padding-left: 15px
+      padding-right: 15px
+/* end media min width 768 pixels */
+
+/* Min width 1000 pixels */
+@media only screen and (min-width: 1000px)
+  .about-grid
+    &__content
+      padding-right: 140px
+
+  .about-grid__content
+    padding-top: 30px
+/* end media min width 1000 pixels */
+
+/* ----- END about section --------------- */
+/*-------------------------------------*/
+/*-------------------------------------*/
