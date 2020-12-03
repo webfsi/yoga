@@ -122,8 +122,57 @@
 
   .section-st_last
     background: #fff url(../img/bg-price.jpg) right bottom no-repeat
-    padding: 100px 0 150px
+    padding: 100px 0 130px
+
+  .review-bl__pic
+    margin-left: 16px
+    margin-top: 20px
+
+  .review-bl__content
+    padding: 15px 50px
+  .review-bl__content:before
+    left: 6px
+  .review-bl-quote:before
+    top: -4px
+    left: -51px
+  .review-bl-quote:after
+    bottom: -53px
+    right: -50px
+  .review-thumbs-wrapp
+    margin-left: 290px
+    padding: 0 65px
+  .review-thumbs-wrapp .slick-prev
+    left: -60px
+  .review-thumbs-wrapp .slick-next
+    right: -30px
 /* end media min width 1000 pixels */
+
+/* Min width 1350 pixels */
+@media only screen and (min-width: 1350px)
+  .review-thumbs-wrapp-dots
+    position: absolute
+    top: 0
+    right: -64px
+    bottom: 0
+    padding-bottom: 70px
+    .slick-dots li
+      display: block
+      line-height: 0px
+      margin: 9px 0 
+      flex-shrink: 0
+      
+
+  .review-thumbs-wrapp-dots .slick-dots
+    height: 100%
+    width: auto
+    display: flex
+    justify-content: center
+    flex-direction: column
+    
+
+  .review-box-wrapp
+    position: relative
+/* end media min width 1350 pixels */
 
 
 /* ----- END review slider --------------- */

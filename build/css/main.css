@@ -531,6 +531,20 @@ a:hover {
   overscroll-behavior: none;
 }
 
+.scroll-here {
+  position: relative;
+  top: -100px;
+  z-index: -10;
+  max-width: 1px;
+  max-height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.section-st_hidden {
+  overflow: hidden;
+}
+
 /* Min width 768 pixels */
 @media only screen and (min-width: 768px) {
   .hidden-mobile {
@@ -714,7 +728,7 @@ a:hover {
 
 .social li a {
   display: inline-block;
-  padding: 5px 10px;
+  padding: 5px 8px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -791,6 +805,9 @@ a:hover {
 /* end media min width 768 pixels */
 /* Min width 1000 pixels */
 @media only screen and (min-width: 1000px) {
+  .f-grid {
+    padding: 90px 0 70px;
+  }
   .f-grid__about {
     min-width: 50%;
     max-width: 50%;
@@ -799,9 +816,36 @@ a:hover {
     min-width: 50%;
     max-width: 50%;
   }
+  .f-grid .title-site_h5, .f-grid h5 {
+    margin-bottom: 50px;
+  }
+  .f-grid__about {
+    padding-right: 120px;
+  }
+  .f-grid__about .social {
+    margin-top: 65px;
+  }
+  .f-grid__contact {
+    padding-left: 15px;
+  }
+  .f-copy {
+    padding: 40px 0;
+  }
 }
 
 /* end media min width 1000 pixels */
+/* Min width 1200 pixels */
+@media only screen and (min-width: 1200px) {
+  .f-points .f-point {
+    min-width: 46%;
+    max-width: 46%;
+  }
+  .f-point {
+    margin-bottom: 25px;
+  }
+}
+
+/* end media min width 1200 pixels */
 /* ----- END Footer -------------------- */
 /*                                       */
 /*                                       */
@@ -833,6 +877,10 @@ a:hover {
   font-size: 30px;
   line-height: 1.1;
   font-weight: 400;
+}
+
+.form-banner .title-site, .form-banner h1, .form-banner h2, .form-banner h3, .form-banner h4, .form-banner h5, .form-banner h6 {
+  text-transform: none;
 }
 
 /* Min width 768 pixels */
@@ -905,6 +953,12 @@ a:hover {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .banner-grid__content > * + * {
+    margin-top: 0;
+  }
+  .banner-grid__content .title-site, .banner-grid__content h1, .banner-grid__content h2 {
+    margin-bottom: 30px;
+  }
   .banner-desc {
     font-size: 40px;
   }
@@ -936,6 +990,20 @@ a:hover {
 }
 
 /* end media min width 1000 pixels */
+/* Min width 1200 pixels */
+@media only screen and (min-width: 1200px) {
+  .banner-grid__form {
+    min-width: 49%;
+    max-width: 49%;
+  }
+  .banner-grid__content {
+    min-width: 43%;
+    max-width: 43%;
+    padding-bottom: 20px;
+  }
+}
+
+/* end media min width 1200 pixels */
 /* ----- END Banner --------------- */
 /*-------------------------------------*/
 /*-------------------------------------*/
@@ -1081,6 +1149,12 @@ a:hover {
   }
   .card__content {
     padding: 35px 20px 35px 30px;
+  }
+  .card__content p {
+    margin-bottom: 10px;
+  }
+  .card__content .title-site, .card__content h1, .card__content h2, .card__content h3, .card__content h4, .card__content h5, .card__content h6 {
+    margin-bottom: 25px;
   }
 }
 
@@ -1365,6 +1439,18 @@ a:hover {
     font-size: 16px;
     line-height: 27px;
   }
+  .section-skills {
+    padding: 120px 0 75px;
+  }
+  .skills-bl__icon {
+    margin-bottom: 27px;
+  }
+  .skills-bl .title-site, .skills-bl h1, .skills-bl h2, .skills-bl h3, .skills-bl h4, .skills-bl h5, .skills-bl h6 {
+    margin-bottom: 12px;
+  }
+  .skills-list__item {
+    margin-bottom: 36px;
+  }
 }
 
 /* end media min width 1000 pixels */
@@ -1452,6 +1538,10 @@ a:hover {
   font-size: 18px;
 }
 
+.p-card--hover .p-card__head {
+  background-color: #7280ee;
+}
+
 /* Min width 540 pixels */
 @media only screen and (min-width: 540px) {
   .price-grid {
@@ -1503,6 +1593,18 @@ a:hover {
   }
   .p-card-value__val {
     font-size: 67px;
+  }
+  .p-card__head {
+    padding: 42px 15px 42px 65px;
+  }
+  .p-card__body {
+    padding-top: 30px;
+  }
+  .p-card-points {
+    margin-bottom: 35px;
+  }
+  .price-box-card {
+    margin-bottom: 85px;
   }
 }
 
@@ -1680,11 +1782,75 @@ a:hover {
   }
   .section-st_last {
     background: #fff url(../img/bg-price.jpg) right bottom no-repeat;
-    padding: 100px 0 150px;
+    padding: 100px 0 130px;
+  }
+  .review-bl__pic {
+    margin-left: 16px;
+    margin-top: 20px;
+  }
+  .review-bl__content {
+    padding: 15px 50px;
+  }
+  .review-bl__content:before {
+    left: 6px;
+  }
+  .review-bl-quote:before {
+    top: -4px;
+    left: -51px;
+  }
+  .review-bl-quote:after {
+    bottom: -53px;
+    right: -50px;
+  }
+  .review-thumbs-wrapp {
+    margin-left: 290px;
+    padding: 0 65px;
+  }
+  .review-thumbs-wrapp .slick-prev {
+    left: -60px;
+  }
+  .review-thumbs-wrapp .slick-next {
+    right: -30px;
   }
 }
 
 /* end media min width 1000 pixels */
+/* Min width 1350 pixels */
+@media only screen and (min-width: 1350px) {
+  .review-thumbs-wrapp-dots {
+    position: absolute;
+    top: 0;
+    right: -64px;
+    bottom: 0;
+    padding-bottom: 70px;
+  }
+  .review-thumbs-wrapp-dots .slick-dots li {
+    display: block;
+    line-height: 0px;
+    margin: 9px 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .review-thumbs-wrapp-dots .slick-dots {
+    height: 100%;
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .review-box-wrapp {
+    position: relative;
+  }
+}
+
+/* end media min width 1350 pixels */
 /* ----- END review slider --------------- */
 /*-------------------------------------*/
 /*-------------------------------------*/
@@ -2392,6 +2558,15 @@ textarea {
   /* end media min width 768 pixels */
 }
 
+/* Min width 1200 pixels */
+@media only screen and (min-width: 1200px) {
+  .menu {
+    padding-left: 47px;
+    padding-right: 47px;
+  }
+}
+
+/* end media min width 1200 pixels */
 /* ----- END Navigation ---------------- */
 /*                                       */
 /*                                       */
@@ -4085,9 +4260,5 @@ input.radio__input {
 /* ----- END Radio custom ------------------ */
 /*                                           */
 /*                                           */
-/* ----- Index page -------------------- */
-/* ----- END index page /--------------- */
-/*                                       */
-/*                                       */
 /* ----- END Styles site --------------- */
 /*# sourceMappingURL=main.css.map */

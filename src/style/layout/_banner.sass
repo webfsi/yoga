@@ -21,6 +21,10 @@
   line-height: 1.1
   font-weight: 400
 
+.form-banner
+  .title-site, h1, h2, h3, h4, h5, h6
+    text-transform: none
+
 /* Min width 768 pixels */
 @media only screen and (min-width: 768px)
   .banner
@@ -66,6 +70,10 @@
       display: flex
       justify-content: center
       flex-direction: column
+  .banner-grid__content > * + *
+    margin-top: 0
+  .banner-grid__content .title-site, .banner-grid__content h1, .banner-grid__content h2
+    margin-bottom: 30px
 
   .banner-desc
     font-size: 40px
@@ -88,6 +96,17 @@
       .form-banner
         margin-right: 0
 /* end media min width 1000 pixels */
+
+/* Min width 1200 pixels */
+@media only screen and (min-width: 1200px)
+  .banner-grid__form
+    min-width: 49%
+    max-width: 49%
+  .banner-grid__content
+    min-width: 43%
+    max-width: 43%
+    padding-bottom: 20px
+/* end media min width 1200 pixels */
 /* ----- END Banner --------------- */
 /*-------------------------------------*/
 /*-------------------------------------*/

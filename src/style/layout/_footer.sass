@@ -29,7 +29,7 @@
         padding-left: 0
     a
       display: inline-block
-      padding: 5px 10px
+      padding: 5px 8px
       transition: all 0.2s ease-in-out
       &:hover
         transform: translateY(-5px)
@@ -84,13 +84,38 @@
 /* Min width 1000 pixels */
 @media only screen and (min-width: 1000px)
   .f-grid
+    padding: 90px 0 70px
     &__about
       min-width: 50%
       max-width: 50%
     &__contact
       min-width: 50%
       max-width: 50%
+
+  .f-grid .title-site_h5, .f-grid h5
+    margin-bottom: 50px
+
+  .f-grid__about
+    padding-right: 120px
+    .social
+      margin-top: 65px
+
+  .f-grid__contact
+    padding-left: 15px
+
+  .f-copy
+    padding: 40px 0
 /* end media min width 1000 pixels */
+
+/* Min width 1200 pixels */
+@media only screen and (min-width: 1200px)
+  .f-points .f-point
+    min-width: 46%
+    max-width: 46%
+
+  .f-point
+    margin-bottom: 25px
+/* end media min width 1200 pixels */
 /* ----- END Footer -------------------- */
 /*                                       */
 /*                                       */
