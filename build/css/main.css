@@ -231,8 +231,9 @@ body {
   padding: 0;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 700;
-  line-height: 1.5em;
+  line-height: 1.2;
   color: #5b6ceb;
+  text-transform: uppercase;
 }
 
 h1, .title-site_h1 {
@@ -344,13 +345,16 @@ a:hover {
     font-size: 26px;
   }
   h4, .title-site_h4 {
-    font-size: 22px;
+    font-size: 20px;
   }
   h5, .title-site_h5 {
     font-size: 18px;
   }
   h6, .title-site_h6 {
     font-size: 16px;
+  }
+  .title-site, h1, h2, h3, h4, h5, h6 {
+    line-height: 1.5em;
   }
   .text-bl-grid {
     display: -webkit-box;
@@ -395,7 +399,7 @@ a:hover {
 }
 
 .section-st {
-  padding: 20px 0;
+  padding: 45px 0;
 }
 
 .container {
@@ -423,6 +427,9 @@ a:hover {
   }
   .hidden-tabl {
     display: none;
+  }
+  .section-st {
+    padding: 60px 0;
   }
   /* end media min width 768 pixels */
 }
@@ -462,6 +469,9 @@ a:hover {
   .hidden-tabl {
     display: block;
   }
+  .section-st {
+    padding: 100px 0;
+  }
   /* end media min width 1000 pixels */
 }
 
@@ -497,6 +507,7 @@ a:hover {
 
 #wrapper.sticky .header {
   position: fixed;
+  z-index: 200;
   background-color: #fff;
   top: 0;
   left: 0;
@@ -683,6 +694,7 @@ a:hover {
   .banner-grid__form {
     min-width: 46%;
     max-width: 46%;
+    margin-right: 0;
   }
   .banner-grid__form .form-banner {
     margin-right: 0;
@@ -691,6 +703,155 @@ a:hover {
 
 /* end media min width 1000 pixels */
 /* ----- END Banner --------------- */
+/*-------------------------------------*/
+/*-------------------------------------*/
+/* ----- Cards section ------------------- */
+.cap-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cap-section .title-site, .cap-section h1, .cap-section h2, .cap-section h3, .cap-section h4, .cap-section h5, .cap-section h6 {
+  margin-bottom: 10px;
+}
+
+.cap-section__desc {
+  color: #777777;
+  font-family: "Freescrpt", Arial, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.card-list > * + * {
+  margin-top: 20px;
+}
+
+.card {
+  -webkit-box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.card__img {
+  height: 250px;
+}
+
+.card__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
+}
+
+.card__name {
+  font-size: 14px;
+  color: #999999;
+}
+
+.card__content {
+  padding: 20px 15px;
+}
+
+.card__content .title-site, .card__content h1, .card__content h2, .card__content h3, .card__content h4, .card__content h5, .card__content h6 {
+  color: #777777;
+}
+
+/* Min width 540 pixels */
+@media only screen and (min-width: 540px) {
+  .card-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .card-list > * + * {
+    margin-top: 0;
+  }
+  .card-list__item {
+    padding: 0 15px;
+    margin-bottom: 30px;
+    min-width: 50%;
+    max-width: 50%;
+  }
+  .card-list__item:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+  .card-list__item:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+  .card-list__item .card {
+    height: 100%;
+  }
+}
+
+/* end media min width 540 pixels */
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px) {
+  .cap-section__desc {
+    font-size: 41px;
+  }
+  .cap-section {
+    margin-bottom: 50px;
+  }
+}
+
+/* end media min width 768 pixels */
+/* Min width 1000 pixels */
+@media only screen and (min-width: 1000px) {
+  .card {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 300px;
+  }
+  .card__img {
+    height: auto;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    max-width: 230px;
+  }
+  .card__content {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cap-section {
+    margin-bottom: 60px;
+  }
+}
+
+/* end media min width 1000 pixels */
+/* Min width 1200 pixels */
+@media only screen and (min-width: 1200px) {
+  .card__img {
+    max-width: 270px;
+  }
+  .card__content {
+    padding: 35px 20px 35px 30px;
+  }
+}
+
+/* end media min width 1200 pixels */
+/* ----- END Cards section --------------- */
 /*-------------------------------------*/
 /*-------------------------------------*/
 /* ----- Controls styles ----------------- */
