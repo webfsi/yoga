@@ -1,11 +1,56 @@
 /* ----- Header ------------------------ */
 .header
   position: relative
+  padding: 10px 0
 
 .logo
   a
     display: block
     outline: none
+
+#wrapper
+  &.sticky
+    padding-top: 88px
+    .header
+      position: fixed
+      background-color: #fff
+      top: 0
+      left: 0
+      right: 0
+      box-shadow: 0 0 5px rgba(#000, 0.5)
+      animation:
+        name: header-fix
+        duration: 0.5s
+        timing-function: ease-in-out
+        fill-mode: backwards
+      
+
+@keyframes header-fix
+  from
+    transform: translateY(-100%)
+  to
+    transform: translateY(0)
+
+#wrapper
+  height: 5000px
+
+.banner
+  height: 500px
+  background-color: blue
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px)
+  .logo_mobile
+    display: none
+
+  .header
+    padding: 16px 0
+
+  #wrapper
+    &.sticky
+      padding-top: 100px
+/* end media min width 768 pixels */
+  
 
 /* ----- END Header -------------------- */
 /*                                       */

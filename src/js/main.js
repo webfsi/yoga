@@ -111,7 +111,6 @@ jQuery(function($){
     $(this).validate(validateOption);
   });
 
-
   // fancybox modal
   $(".open-fancy").fancybox({
     fitToView   : false,
@@ -134,6 +133,16 @@ jQuery(function($){
     }else{
       $(this).parent().addClass('menu-burger--opened');
       $('body').addClass('menu-open-wrapper-page');
+    }
+  });
+  
+  // Scrool menu fixed
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > $('.header').height()){  
+      $('#wrapper').addClass("sticky");
+    }
+    else{
+      $('#wrapper').removeClass("sticky");
     }
   });
 
