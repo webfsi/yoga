@@ -1,3 +1,9 @@
+
+// page scroll blocker
+function toggleDocumentScrollBlocker() {
+  document.body.classList.toggle('document-scroll-blocker');
+};
+
 jQuery(function($){
 
   $('input[placeholder], textarea[placeholder]').placeholder();
@@ -57,31 +63,78 @@ jQuery(function($){
   //   focusOnSelect: true
   // });
 
+  // validate form
+  const validateOption = {
+    rules: {
+      firstname: "required",
+      login: "required",
+      lastname: "required",
+      adress: "required",
+      sity: "required",
+      email: {
+        required: true,
+        email: true
+      },
+      select: {
+        minlength: 1,
+        required: true
+      },
+      phone: {
+        required: true
+      },
+      password: {
+        required: true,
+        minlength: 6
+      },
+      confirm_password: {
+        required: true,
+        minlength: 6,
+        equalTo: "#password"
+      },
+      password2: {
+        minlength: 6
+      },
+      confirm_password2: {
+        equalTo: "#password2"
+      }
+    }, 
+    messages: {
+      test: {
+        required: "(Please choose up to 3 answers)",
+        minlength: "(PLEASE choose up to 3 answers)"
+      }
+    }
+  }
 
-  // $(".open-fancy").fancybox({
-  //   fitToView   : false,
-  //   autoSize    : false,
-  //   closeClick  : false
-  // });
+  //validate form init
+  $('.form-validate').each(function() {
+    $(this).validate(validateOption);
+  });
 
-  // add-open-class
-  $('.burger-menu').click(function(){
-   if($(this).parent().is('.menu-burger--opened')){
-     $(this).parent().removeClass('menu-burger--opened');
-     $('body').removeClass('menu-open-wrapper-page');
-   }else{
-     $(this).parent().addClass('menu-burger--opened');
-     $('body').addClass('menu-open-wrapper-page');
-   }
+
+  // fancybox modal
+  $(".open-fancy").fancybox({
+    fitToView   : false,
+    autoSize    : false,
+    closeClick  : false,
+    touch       : false,
+    onInit: function (instance, current) {
+      toggleDocumentScrollBlocker()
+    },
+    afterClose: function (instance, current) {
+      toggleDocumentScrollBlocker()
+    }
   });
 
   // add-open-class
-  $('.menu-item__link_dd-open').click(function(){
-   if($(this).parent().is('.menu-item_dd-opened')){
-    $(this).parent().removeClass('menu-item_dd-opened');
-   }else{
-    $(this).parent().addClass('menu-item_dd-opened');
-   }
+  $('.burger-menu').click(function(){
+    if($(this).parent().is('.menu-burger--opened')){
+      $(this).parent().removeClass('menu-burger--opened');
+      $('body').removeClass('menu-open-wrapper-page');
+    }else{
+      $(this).parent().addClass('menu-burger--opened');
+      $('body').addClass('menu-open-wrapper-page');
+    }
   });
 
 });

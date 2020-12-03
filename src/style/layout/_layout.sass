@@ -23,6 +23,12 @@
 .visible-lap, .hidden-full, .hidden-mobile
   display: none
 
+.document-scroll-blocker
+  touch-action: none
+  -webkit-overflow-scrolling: none
+  overflow: hidden
+  overscroll-behavior: none
+
 
 /* Min width 768 pixels */
 @media only screen and (min-width: 768px)
@@ -30,7 +36,7 @@
     display: block
     
   .hidden-tabl
-    display: block
+    display: none
   /* end media min width 768 pixels */
 
 
@@ -52,29 +58,27 @@
   .section-st
     padding: 50px 0
 
-  .container
-    max-width: 980px
-    padding-left: 10px
-    padding-right: 10px
-    margin: 0 auto
-
   .visible-lap
     display: block
 
   .hidden-lap
     display: none
+    
+  .hidden-tabl
+    display: block
   /* end media min width 1000 pixels */
 
 
-/* Min width 1220 pixels */
-@media only screen and (min-width: 1220px)
+/* Min width 1200 pixels */
+@media only screen and (min-width: 1200px)
   .section-st_lg
     padding: 80px 0
   .hidden-lap
     display: block
   .container
-    max-width: 1170px
-  /* end media min width 1220 pixels */
+    max-width: 1200px
+    margin: 0 auto
+  /* end media min width 1200 pixels */
 
 
 
