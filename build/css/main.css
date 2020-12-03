@@ -676,9 +676,132 @@ a:hover {
 /*                                       */
 /* ----- Footer ------------------------ */
 .footer {
-  padding: 20px 0;
+  background-color: #5b6ceb;
+  color: #fff;
 }
 
+.footer .title-site, .footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6 {
+  color: inherit;
+}
+
+.f-copy {
+  text-align: center;
+  padding: 20px 0;
+  color: #b7bffc;
+  background-color: #5363d8;
+}
+
+.f-grid {
+  padding: 50px 0 20px;
+}
+
+.f-grid__about {
+  margin-bottom: 40px;
+}
+
+.f-grid .title-site_h5, .f-grid h5 {
+  margin-bottom: 30px;
+}
+
+.social li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.social li:first-child a {
+  padding-left: 0;
+}
+
+.social li a {
+  display: inline-block;
+  padding: 5px 10px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.social li a:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.f-point {
+  padding-left: 35px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.f-point a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.f-point a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.f-point .icon {
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+
+.f-point .icon_ic-planet {
+  top: 0;
+}
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px) {
+  .f-copy {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .f-grid {
+    padding: 50px 0 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .f-grid__about {
+    min-width: 40%;
+    max-width: 40%;
+    padding-right: 40px;
+  }
+  .f-grid__contact {
+    min-width: 60%;
+    max-width: 60%;
+  }
+  .f-points {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .f-points .f-point {
+    min-width: 50%;
+    max-width: 50%;
+    padding-right: 10px;
+  }
+}
+
+/* end media min width 768 pixels */
+/* Min width 1000 pixels */
+@media only screen and (min-width: 1000px) {
+  .f-grid__about {
+    min-width: 50%;
+    max-width: 50%;
+  }
+  .f-grid__contact {
+    min-width: 50%;
+    max-width: 50%;
+  }
+}
+
+/* end media min width 1000 pixels */
 /* ----- END Footer -------------------- */
 /*                                       */
 /*                                       */

@@ -1,7 +1,96 @@
 /* ----- Footer ------------------------ */
 .footer
+  background-color: $col-2
+  color: #fff
+  .title-site, h1, h2, h3, h4, h5, h6
+    color: inherit
+.f-copy
+  text-align: center
   padding: 20px 0
+  color: $col-12
+  background-color: $col-11
 
+.f-grid
+  padding: 50px 0 20px
+  &__about
+    margin-bottom: 40px
+
+.f-grid
+  .title-site_h5, h5
+    margin-bottom: 30px
+    
+
+.social
+  li
+    display: inline-block
+    vertical-align: middle
+    &:first-child
+      a
+        padding-left: 0
+    a
+      display: inline-block
+      padding: 5px 10px
+      transition: all 0.2s ease-in-out
+      &:hover
+        transform: translateY(-5px)
+
+.f-point
+  padding-left: 35px
+  position: relative
+  margin-bottom: 20px
+
+  a
+    color: #fff
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+      color: #fff
+      
+    
+  .icon
+    position: absolute
+    top: 5px
+    left: 0
+  .icon_ic-planet
+    top: 0
+  
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px)
+  .f-copy
+    font-size: 16px
+    line-height: 22px
+
+  .f-grid
+    padding: 50px 0 30px
+    display: flex
+    &__about
+      min-width: 40%
+      max-width: 40%
+      padding-right: 40px
+    &__contact
+      min-width: 60%
+      max-width: 60%
+  .f-points
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    .f-point
+      min-width: 50%
+      max-width: 50%
+      padding-right: 10px
+/* end media min width 768 pixels */
+
+/* Min width 1000 pixels */
+@media only screen and (min-width: 1000px)
+  .f-grid
+    &__about
+      min-width: 50%
+      max-width: 50%
+    &__contact
+      min-width: 50%
+      max-width: 50%
+/* end media min width 1000 pixels */
 /* ----- END Footer -------------------- */
 /*                                       */
 /*                                       */
