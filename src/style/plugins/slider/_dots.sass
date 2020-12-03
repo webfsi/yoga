@@ -1,6 +1,6 @@
 /* DOTS */
-$SL-dot-wh: 12px
-$SL-dot-margin: 6
+$SL-dot-wh: 20px
+$SL-dot-margin: 5
 $wh-dots: $SL-dot-wh+($SL-dot-margin*2)
 
 .slick-dots
@@ -28,10 +28,13 @@ $wh-dots: $SL-dot-wh+($SL-dot-margin*2)
       display: inline-block
       position: relative
 
-      background-color: #ebebeb
+      background-color: transparent
       width: $SL-dot-wh
       height: $SL-dot-wh
-
+      border-radius: 50%
+      border: 2px solid $col-3
+      padding: 3px
+      background-clip: content-box
 
       &:hover:before, &:focus:before
         opacity: 1
@@ -49,5 +52,6 @@ $wh-dots: $SL-dot-wh+($SL-dot-margin*2)
         height: $wh-dots+(px)
 
     &.slick-active button
-      background-color: #000
+      background-color: $col-2
+      border-color: $col-2
 

@@ -1,0 +1,112 @@
+/* ----- Price card ------------------- */
+.price-grid__item
+  margin-bottom: 20px
+.p-card
+  box-shadow: 6px 6px 50px rgba(0, 0, 0, 0.1)
+  border-radius: 10px
+  background-color: $col-1
+  overflow: hidden
+  text-align: center
+  &__head
+    padding: 20px 15px
+    background-color: $col-2
+    color: #fff
+
+  &__body
+    padding: 20px 15px
+
+.price-box-card
+  margin-bottom: 50px
+
+.p-card-point
+  color: $col-4
+  font-size: 14px
+  line-height: 20px
+  text-transform: uppercase
+  padding: 10px 0
+  position: relative
+  &s
+    margin-bottom: 10px
+  &:last-child
+    &:after
+      display: none
+  &:after
+    content: ""
+    position: absolute
+    width: 100px
+    height: 1px
+    margin-left: -50px
+    left: 50%
+    bottom: 0
+    background-color: $col-3
+
+.p-card-points-wrapp
+  .p-card-points
+    display: inline-block
+    text-align: left
+    
+
+.p-card-value
+  color: $col-1
+  font-size: 50px
+  font-weight: 700
+  line-height: 1
+  text-transform: uppercase
+  &__symbol
+    font-size: 32px
+    vertical-align: middle
+    line-height: 36px
+    position: relative
+    top: -4px
+  &__name
+    font-size: 18px
+
+/* Min width 540 pixels */
+@media only screen and (min-width: 540px)
+  .price-grid
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    margin-left: -10px
+    margin-right: -10px
+    &__item
+      padding: 0 10px
+      min-width: 50%
+      max-width: 50%
+      margin-bottom: 20px
+/* end media min width 540 pixels */
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px)
+  .price-grid
+    &__item
+      min-width: 33.3%
+      max-width: 33.3%
+
+  .p-card-points
+    margin-bottom: 20px
+/* end media min width 768 pixels */
+
+/* Min width 1000 pixels */
+@media only screen and (min-width: 1000px)
+  .price-grid
+    &__item
+      min-width: 33.3%
+      max-width: 33.3%
+
+  .p-card-point
+    font-size: 18px
+    line-height: 24px
+    padding: 18px 0
+
+  .p-card__body
+    padding-bottom: 50px
+
+  .p-card-value
+    &__val
+      font-size: 67px
+/* end media min width 1000 pixels */
+
+/* ----- END Price card --------------- */
+/*-------------------------------------*/
+/*-------------------------------------*/

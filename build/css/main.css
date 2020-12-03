@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ----- Styles site ------------------- */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 button, hr, input {
@@ -1245,6 +1246,323 @@ a:hover {
 
 /* end media min width 1000 pixels */
 /* ----- END skills section --------------- */
+/*-------------------------------------*/
+/*-------------------------------------*/
+/* ----- Price card ------------------- */
+.price-grid__item {
+  margin-bottom: 20px;
+}
+
+.p-card {
+  -webkit-box-shadow: 6px 6px 50px rgba(0, 0, 0, 0.1);
+          box-shadow: 6px 6px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #ffffff;
+  overflow: hidden;
+  text-align: center;
+}
+
+.p-card__head {
+  padding: 20px 15px;
+  background-color: #5b6ceb;
+  color: #fff;
+}
+
+.p-card__body {
+  padding: 20px 15px;
+}
+
+.price-box-card {
+  margin-bottom: 50px;
+}
+
+.p-card-point {
+  color: #555555;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 10px 0;
+  position: relative;
+}
+
+.p-card-points {
+  margin-bottom: 10px;
+}
+
+.p-card-point:last-child:after {
+  display: none;
+}
+
+.p-card-point:after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  margin-left: -50px;
+  left: 50%;
+  bottom: 0;
+  background-color: #d7d7d7;
+}
+
+.p-card-points-wrapp .p-card-points {
+  display: inline-block;
+  text-align: left;
+}
+
+.p-card-value {
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.p-card-value__symbol {
+  font-size: 32px;
+  vertical-align: middle;
+  line-height: 36px;
+  position: relative;
+  top: -4px;
+}
+
+.p-card-value__name {
+  font-size: 18px;
+}
+
+/* Min width 540 pixels */
+@media only screen and (min-width: 540px) {
+  .price-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .price-grid__item {
+    padding: 0 10px;
+    min-width: 50%;
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+}
+
+/* end media min width 540 pixels */
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px) {
+  .price-grid__item {
+    min-width: 33.3%;
+    max-width: 33.3%;
+  }
+  .p-card-points {
+    margin-bottom: 20px;
+  }
+}
+
+/* end media min width 768 pixels */
+/* Min width 1000 pixels */
+@media only screen and (min-width: 1000px) {
+  .price-grid__item {
+    min-width: 33.3%;
+    max-width: 33.3%;
+  }
+  .p-card-point {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 18px 0;
+  }
+  .p-card__body {
+    padding-bottom: 50px;
+  }
+  .p-card-value__val {
+    font-size: 67px;
+  }
+}
+
+/* end media min width 1000 pixels */
+/* ----- END Price card --------------- */
+/*-------------------------------------*/
+/*-------------------------------------*/
+/* ----- review slider ------------------- */
+.review-bl__pic {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 0 9px #ffffff, 0 0 0 11px #d7d7d7;
+          box-shadow: 0 0 0 9px #ffffff, 0 0 0 11px #d7d7d7;
+  margin: 11px auto 20px;
+}
+
+.review-bl__pic img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
+  width: 100%;
+  height: 100%;
+}
+
+.review-slider {
+  -webkit-box-shadow: 6px 6px 50px rgba(0, 0, 0, 0.1);
+          box-shadow: 6px 6px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 30px 15px 50px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.review-bl__content {
+  padding: 10px 30px;
+  position: relative;
+}
+
+.review-bl__content:before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  bottom: 15px;
+  width: 2px;
+  background-color: #d7d7d7;
+}
+
+.review-bl-quote {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.review-bl-quote:before {
+  content: "“";
+  position: absolute;
+  top: -10px;
+  left: -30px;
+  font-size: 60px;
+  line-height: 1;
+  color: #5b6ceb;
+}
+
+.review-bl-quote:after {
+  content: "”";
+  position: absolute;
+  bottom: -40px;
+  right: -30px;
+  font-size: 60px;
+  line-height: 1;
+  color: #5b6ceb;
+}
+
+.review-bl-quote i {
+  font-style: italic;
+}
+
+.review-bl-name {
+  color: #5b6ceb;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.review-bl-name span {
+  color: #777777;
+  font-size: 14px;
+  display: block;
+}
+
+.review-bl-name b {
+  font-weight: 700;
+}
+
+.review-thumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.review-thumbs__name {
+  font-weight: 700;
+}
+
+.review-thumbs__name-joob {
+  color: #777777;
+  font-size: 12px;
+}
+
+.review-thumbs__pic {
+  width: 62px;
+  height: 62px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 0 3px #ffffff, 0 0 0 5px #d7d7d7;
+          box-shadow: 0 0 0 3px #ffffff, 0 0 0 5px #d7d7d7;
+  margin: 5px 11px 5px 10px;
+}
+
+.review-thumbs-wrapp {
+  padding: 0 50px;
+  position: relative;
+  top: -37px;
+}
+
+.review-thumbs-wrapp .slick-prev {
+  left: -40px;
+}
+
+.review-thumbs-wrapp .slick-next {
+  right: -40px;
+}
+
+.review-thumbs-wrapp-dots .slick-dots {
+  position: relative;
+  bottom: auto;
+}
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px) {
+  .review-bl {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .review-bl__pic {
+    margin-right: 50px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-left: 12px;
+  }
+  .review-thumbs-wrapp {
+    max-width: 340px;
+    margin-left: 200px;
+  }
+}
+
+/* end media min width 768 pixels */
+/* Min width 1000 pixels */
+@media only screen and (min-width: 1000px) {
+  .review-slider {
+    padding: 30px 150px 60px 60px;
+    margin: 0;
+  }
+  .review-thumbs-wrapp {
+    margin-left: 250px;
+  }
+  .section-st_last {
+    background: #fff url(../img/bg-price.jpg) right bottom no-repeat;
+    padding: 100px 0 150px;
+  }
+}
+
+/* end media min width 1000 pixels */
+/* ----- END review slider --------------- */
 /*-------------------------------------*/
 /*-------------------------------------*/
 /* ----- Controls styles ----------------- */
@@ -3472,7 +3790,7 @@ body.compensate-for-scrollbar {
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
-  margin: 0 6px;
+  margin: 0 5px;
 }
 
 .slick-dots li button {
@@ -3486,9 +3804,13 @@ body.compensate-for-scrollbar {
   outline: none;
   display: inline-block;
   position: relative;
-  background-color: #ebebeb;
-  width: 12px;
-  height: 12px;
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #d7d7d7;
+  padding: 3px;
+  background-clip: content-box;
 }
 
 .slick-dots li button:hover:before, .slick-dots li button:focus:before {
@@ -3502,14 +3824,15 @@ body.compensate-for-scrollbar {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -12pxpx;
-  margin-left: -12pxpx;
-  width: 24pxpx;
-  height: 24pxpx;
+  margin-top: -15pxpx;
+  margin-left: -15pxpx;
+  width: 30pxpx;
+  height: 30pxpx;
 }
 
 .slick-dots li.slick-active button {
-  background-color: #000;
+  background-color: #5b6ceb;
+  border-color: #5b6ceb;
 }
 
 .slider-nav {

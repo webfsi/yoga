@@ -57,6 +57,7 @@ jQuery(function($){
   //   ]
   // });
 
+  //slider 1
   $('.slider_gallery').slick({
     infinite: true,
     dots: false,
@@ -69,6 +70,7 @@ jQuery(function($){
     speed: 300
   });
 
+  // slider 2
   $('.slider_about').slick({
     infinite: false,
     dots: false,
@@ -80,21 +82,23 @@ jQuery(function($){
     speed: 300
   });
 
-  // $('.slider-for').slick({
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   arrows: false,
-  //   fade: true,
-  //   asNavFor: '.slider-nav'
-  // });
-  // $('.slider-nav').slick({
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   asNavFor: '.slider-for',
-  //   dots: true,
-  //   centerMode: true,
-  //   focusOnSelect: true
-  // });
+  //sliders 3
+  $('.slider_review').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider_review-thumbs'
+  });
+  $('.slider_review-thumbs').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    asNavFor: '.slider_review',
+    dots: true,
+    appendDots: $('.review-thumbs-wrapp-dots'),
+    // centerMode: true,
+    focusOnSelect: true
+  });
 
   // validate form
   const validateOption = {
