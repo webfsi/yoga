@@ -56,7 +56,8 @@ $color-item-hover: #000
   vertical-align: top
   position: relative
   margin: 0
-  min-width: 200px
+  min-width: 120px
+  width: 100%
   flex-shrink: 0
   background: $select-fill-color
   height: $select-height
@@ -73,7 +74,7 @@ $color-item-hover: #000
     overflow: hidden
     cursor: default
     display: block
-    font-size: 13px
+    font-size: 14px
     line-height: $select-height
     margin: 0 35px 0 $padding-vert
   // arrow top
@@ -83,20 +84,19 @@ $color-item-hover: #000
     right: 0
     top: 0
     text-align: center
-    width: 26px
+    width: 30px
     line-height: $select-height
-    border-left: 1px solid #000
     &:before
       content: ' '
       position: absolute
       top: 50%
       left: 50%
-      transition: $arrow-transition
-      width: $arrow-width
-      height: $arrow-height
-      margin-top: -($arrow-height/2)
-      margin-left: -($arrow-width/2)
-      background: #000 $arrow-url 50% 50% no-repeat
+      margin-top: -3px
+      margin-left: -5px
+      border-top: 5px solid $col-13
+      border-left: 5px solid transparent
+      border-right: 5px solid transparent
+      
 
 .jcf-drop-active
   border-radius: $select-radius $select-radius 0 0
@@ -167,7 +167,7 @@ $color-item-hover: #000
   display: inline-block
   vertical-align: top
   position: relative
-  background: #fff
+  background: $col-8
   line-height: 14px
   font-size: 12px
   width: 100%

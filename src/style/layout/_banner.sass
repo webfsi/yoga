@@ -1,0 +1,92 @@
+/* ----- Banner ------------------- */
+.banner
+  padding: 40px 0
+  background-color: $col-5
+
+.banner-grid__content
+  text-align: center
+  color: $col-1
+  margin-bottom: 40px
+  >*+*
+    margin-top: 20px
+  .title-site, h1, h2
+    margin-bottom: 20px
+    color: inherit
+    text-transform: uppercase
+
+.banner-desc
+  color: $col-1
+  font-family: $site-font-family-2
+  font-size: 30px
+  line-height: 1.1
+  font-weight: 400
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px)
+  .banner
+    min-height: 440px
+    display: flex
+    justify-content: center
+    flex-direction: column
+    .container
+      width: 100%
+  .banner-grid
+    display: flex
+    &__content
+      order: 1
+      flex-grow: 1
+    &__form
+      flex-shrink: 0
+      margin-right: 30px
+
+  .banner-grid__content
+    text-align: left
+
+  .banner
+    position: relative
+    z-index: 1
+    background-image: url(../img/banner-bg.jpg)
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    
+    &:after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      background-color: rgba($col-5, 0.8)
+      z-index: -1
+
+  .banner-grid
+    &__content
+      margin-bottom: 0
+      display: flex
+      justify-content: center
+      flex-direction: column
+
+  .banner-desc
+    font-size: 40px
+      
+    
+/* end media min width 768 pixels */
+/* Min width 1000 pixels */
+@media only screen and (min-width: 1000px)
+  .banner
+    min-height: 600px
+  .banner-grid
+    justify-content: space-between
+    &__content
+      min-width: 46%
+      max-width: 46%
+    &__form
+      min-width: 46%
+      max-width: 46%
+      .form-banner
+        margin-right: 0
+/* end media min width 1000 pixels */
+/* ----- END Banner --------------- */
+/*-------------------------------------*/
+/*-------------------------------------*/

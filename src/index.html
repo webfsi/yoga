@@ -10,9 +10,42 @@
 
   //= template/header.html
 
-  <div class="banner">
-    <div class="container"></div>
-  </div>
+  <section class="banner">
+    <div class="container">
+      <div class="banner-grid">
+        <div class="banner-grid__content">
+          <h1>Just Balance <br>
+            your Mind & Body </h1>
+          <div class="banner-desc">Create the healthy living <br>
+            for yourself</div>
+        </div>
+        <div class="banner-grid__form">
+          <form action="#" class="form-banner form-validate">
+            <div class="title-site title-site_h3">Trial Class</div>
+            <div class="form-group">
+              <input class="form-group__field" type="text" placeholder="Enter your name" name="text">
+            </div>
+            <div class="form-group">
+              <input class="form-group__field mask-phone" type="tel" placeholder="Enter your phone" name="phone">
+            </div>
+            <div class="form-group">
+              <select class="select-st" name="select">
+                <option class="hideme" value="">Chose your class</option>
+                <option value="v1">Chose your class 1</option>
+                <option value="v2">Chose your class 2</option>
+                <option value="v3">Chose your class 3</option>
+                <option value="v4">Chose your class 4</option>
+              </select>
+              <label id="select-error" class="error" for="select"></label>
+            </div>
+            <div class="form-group form-group_btn text_right">
+              <button type="submit" class="btn btn_min-width">Try it</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div id="middle">
 
