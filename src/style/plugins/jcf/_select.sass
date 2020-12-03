@@ -1,0 +1,249 @@
+/* select */
+
+body > .jcf-select-drop
+  position: absolute
+  margin: -1px 0 0
+  z-index: 9999
+  &.jcf-drop-flipped
+    margin: 1px 0 0
+
+.jcf-select
+  .jcf-select-drop
+    position: absolute
+    margin-top: 0px
+    z-index: 9999
+    top: 100%
+    left: -1px
+    right: -1px
+  .jcf-drop-flipped
+    bottom: 100%
+    top: auto
+  &.jcf-compact-multiple
+    max-width: 220px
+    .jcf-select-opener:before
+      display: inline-block
+      padding-top: 2px
+      content: '...'
+
+
+$select-radius: $input-radius
+$select-height: $input-height
+$select-fill-color: $input-fill-color
+$select-border: $input-border
+
+$arrow-width: 20px
+$arrow-height: 20px
+$arrow-url: url(../img/icon/arrow-down.png)
+$arrow-transition: cubic-bezier(0,-0.5,.5,-0.5) 0.3s
+
+$padding-goriz: 10px
+$padding-vert: 10px
+$background-item: #e6e6e6
+$color-item: #000
+$color-item-hover: #000
+
+@keyframes select-anim
+  0%
+    opacity: 0
+    transform: rotateX(-90deg)
+  100%
+    opacity: 1
+    transform: rotateX(0deg)
+
+
+.jcf-select
+  display: inline-block
+  vertical-align: top
+  position: relative
+  margin: 0
+  min-width: 200px
+  flex-shrink: 0
+  background: $select-fill-color
+  height: $select-height
+  border-radius: $select-radius
+  border: $select-border
+  select
+    z-index: 1
+    left: 0
+    top: 0
+  //text top
+  .jcf-select-text
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+    cursor: default
+    display: block
+    font-size: 13px
+    line-height: $select-height
+    margin: 0 35px 0 $padding-vert
+  // arrow top
+  .jcf-select-opener
+    position: absolute
+    bottom: 0
+    right: 0
+    top: 0
+    text-align: center
+    width: 26px
+    line-height: $select-height
+    border-left: 1px solid #000
+    &:before
+      content: ' '
+      position: absolute
+      top: 50%
+      left: 50%
+      transition: $arrow-transition
+      width: $arrow-width
+      height: $arrow-height
+      margin-top: -($arrow-height/2)
+      margin-left: -($arrow-width/2)
+      background: #000 $arrow-url 50% 50% no-repeat
+
+.jcf-drop-active
+  border-radius: $select-radius $select-radius 0 0
+  // arrow top active
+  .jcf-select-opener
+    &:before
+      transform: rotate(180deg)
+
+.jcf-drop-flipped.jcf-select
+  border-radius: 0 0 $select-radius $select-radius
+  .jcf-select-opener
+    &:before
+      transform: rotate(0deg)
+
+.jcf-drop-flipped.jcf-select-drop
+  border-radius: $select-radius $select-radius 0 0
+  transform-origin: bottom center
+  .jcf-select-drop-content
+    border: $select-border
+    border-radius: $select-radius $select-radius 0 0
+    overflow: hidden
+
+//box bottom
+.jcf-select-drop
+  transition: ease 0.3s
+  animation:
+    name: select-anim
+    duration: 300ms
+    timing-function: ease-in-out
+  transform-origin: top center
+  //border box bottom
+  .jcf-select-drop-content
+    border: $select-border
+    border-radius: 0 0 $select-radius $select-radius
+    overflow: hidden
+  &.jcf-compact-multiple
+    .jcf-hover
+      background: none
+    .jcf-selected
+      background: #e6e6e6
+      color: #000
+      &:before
+        display: inline-block
+        content: ''
+        height: 4px
+        width: 8px
+        margin: -7px 5px 0 -3px
+        border: 3px solid #777
+        border-width: 0 0 3px 3px
+        -moz-transform: rotate(-45deg)
+        -ms-transform: rotate(-45deg)
+        -webkit-transform: rotate(-45deg)
+        transform: rotate(-45deg)
+        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865483, M12=0.7071067811865467, M21=-0.7071067811865467, M22=0.7071067811865483, SizingMethod='auto expand')"
+
+/* multiple select styles */
+
+.jcf-list-box
+  overflow: hidden
+  display: inline-block
+  border: 1px solid #b8c3c9
+  min-width: 200px
+  margin: 0 15px
+
+/* select options styles */
+
+.jcf-list
+  display: inline-block
+  vertical-align: top
+  position: relative
+  background: #fff
+  line-height: 14px
+  font-size: 12px
+  width: 100%
+  .jcf-list-content
+    vertical-align: top
+    display: inline-block
+    overflow: auto
+    width: 100%
+  ul
+    list-style: none
+    padding: 0
+    margin: 0
+    li
+      overflow: hidden
+      display: block
+  .jcf-overflow
+    overflow: auto
+  .jcf-option
+    white-space: nowrap
+    overflow: hidden
+    cursor: default
+    display: block
+    padding: $padding-vert $padding-goriz
+    color: $color-item
+    min-height: 14px
+    height: 1%
+  .jcf-disabled
+    background: #fff !important
+    color: #aaa !important
+
+.jcf-select-drop .jcf-hover, .jcf-list-box .jcf-selected
+  background: $background-item
+  color: $color-item-hover
+
+.jcf-list
+  .jcf-optgroup-caption
+    white-space: nowrap
+    font-weight: bold
+    display: block
+    padding: $padding-vert $padding-goriz
+    cursor: default
+    color: #000
+  .jcf-optgroup .jcf-option
+    padding-left: 30px
+
+.jcf-select-color .jcf-select-text .jcf-option-color
+  font-weight: bold
+
+.jcf-select-text .jcf-option-red, .jcf-list .jcf-option-red
+  color: #d00
+
+.jcf-select-text .jcf-option-green, .jcf-list .jcf-option-green
+  color: #0d0
+
+.jcf-select-text .jcf-option-blue, .jcf-list .jcf-option-blue
+  color: #00d
+
+.jcf-select-drop .jcf-option-hideme
+  display: none
+
+.jcf-select.jcf-select-present
+  line-height: 48px
+  height: 48px
+  background: #fff
+  .jcf-select-text img
+    vertical-align: top
+    width: 32px
+    height: auto
+    margin: 7px 5px 0 0
+
+.jcf-select-present
+  .jcf-select-text
+    line-height: 48px
+  .jcf-list
+    font-style: italic
+    line-height: 48px
+    img
+      vertical-align: middle
+      margin: 0 5px 0 0

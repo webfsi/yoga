@@ -1,0 +1,74 @@
+/* Navigation */
+$SL-nav-wh: 40px
+$SL-nav-arr-w: 8
+$SL-nav-arr-h: 12
+$SL-nav-arr-left: url(../img/icons/arrow-left-slider.svg)
+$SL-nav-arr-right: url(../img/icons/arrow-right-slider.svg)
+
+.slick-prev, .slick-next
+  font-size: 0
+  line-height: 0
+  position: absolute
+  z-index: 1
+  top: 50%
+  width: $SL-nav-wh
+  height: $SL-nav-wh
+  margin: -($SL-nav-wh/2) 0 0
+  background-color: #eee
+  padding: 0
+  border: none
+  outline: none
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    margin: auto
+  &:hover
+    background-color: #d1a27a
+
+.slick-prev
+  &:hover, &:focus
+    color: transparent
+    outline: none
+
+.slick-next
+  &:hover, &:focus
+    color: transparent
+    outline: none
+
+.slick-prev
+  left: -15px
+  &:before
+    margin-left: -($SL-nav-arr-w/2+2)+(px)
+    background-image: $SL-nav-arr-left
+
+    background-image: url("https://image.flaticon.com/icons/svg/271/271220.svg")
+    background-size: 100% 100%
+    
+.slick-next
+  right: -15px
+  &:before
+    margin-left: -($SL-nav-arr-w/2-2)+(px)
+    background-image: $SL-nav-arr-right
+
+    background-image: url("https://image.flaticon.com/icons/svg/32/32213.svg")
+    background-size: 100% 100%
+  
+
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before
+  opacity: .25
+
+
+[dir='rtl'] .slick-prev
+  right: -25px
+  left: auto
+
+[dir='rtl'] .slick-next
+  right: auto
+  left: -25px
+
+.slick-slide
+  outline: none

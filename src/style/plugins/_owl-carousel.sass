@@ -1,0 +1,121 @@
+/*_____________ Owl Carousel _____________________*/
+
+@import standard/owl-carousel
+
+// .main-slider-wrapp
+//   .owl-carousel
+//     position: static
+//     .owl-item, .owl-stage, .owl-stage-outer
+//       position: static
+
+.owl-carousel_nav-hidden.owl-carousel
+  .owl-nav
+    display: none
+
+.owl-carousel_dots-hidden.owl-carousel
+  .owl-dots
+    display: none
+
+/* Navigation */
+$owl-nav-wh: 40px
+$owl-nav-arr-w: 20
+$owl-nav-arr-h: 20
+$owl-nav-arr-left: url(../img/icon/arrow-left.png)
+$owl-nav-arr-right: url(../img/icon/arrow-right.png)
+
+.owl-prev, .owl-next
+  position: absolute
+  top: 50%
+  width: $owl-nav-wh
+  height: $owl-nav-wh
+  margin: 0
+  margin-top: -($owl-nav-wh/2)
+  background-color: #eee
+  padding: 0
+  opacity: 0.9
+
+.owl-prev:hover, .owl-next:hover
+  opacity: 1
+
+.owl-prev:before, .owl-next:before
+  content: ''
+  position: absolute
+  top: 50%
+  left: 50%
+  background-position: 0 0
+  background-repeat: no-repeat
+  
+  width: $owl-nav-arr-w+(px)
+  height: $owl-nav-arr-h+(px)
+  margin-top: -($owl-nav-arr-h/2)+(px)
+
+.owl-prev
+  left: -15px
+  &:before
+    margin-left: -($owl-nav-arr-w/2+2)+(px)
+    background-image: $owl-nav-arr-left
+
+    background-image: url("https://image.flaticon.com/icons/svg/271/271220.svg")
+    background-size: 100% 100%
+
+.owl-next
+  right: -15px
+  &:before
+    margin-left: -($owl-nav-arr-w/2-2)+(px)
+    background-image: $owl-nav-arr-right
+
+    background-image: url("https://image.flaticon.com/icons/svg/32/32213.svg")
+    background-size: 100% 100%
+
+//------------------------------
+/* Dots */
+$owl-dot-wh: 10
+$owl-dot-margin: 5
+$wh-dots: $owl-dot-wh+($owl-dot-margin*2)
+
+.carousel-st-wrapp
+  overflow: hidden
+  padding-bottom: 40px
+
+.owl-dots
+  position: absolute
+  bottom: -30px
+  width: 100%
+  text-align: center
+
+.owl-dot
+  display: inline-block
+  position: relative
+  width: $owl-dot-wh+(px)
+  height: $owl-dot-wh+(px)
+  border-radius: 50%
+  background-color: lighten(#000, 50%)
+  margin: 0 $owl-dot-margin+(px)
+
+  // box-sizing: content-box
+  // background-clip: content-box
+  // border: 2px solid transparent
+
+  &.active
+    width: $owl-dot-wh+(px)
+    height: $owl-dot-wh+(px)
+    background-color: #000
+
+    // border-color: #000
+    // background-clip: padding-box
+    // box-sizing: padding-box
+    // background-color: transparent
+
+  &:before
+    content: ' '
+    position: absolute
+    top: 50%
+    left: 50%
+    width: $wh-dots+(px)
+    height: $wh-dots+(px)
+    margin-top: -($wh-dots/2)+(px)
+    margin-left: -($wh-dots/2)+(px)
+    border-radius: 50%
+    background-color: transparent
+
+/*____________end Owl Carousel _____________________*/
